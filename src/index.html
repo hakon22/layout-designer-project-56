@@ -8,22 +8,36 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="bg-image flex-center">
-        <div class="container" id="page-description">
-            <div class="head">
-                <span class="logo">
-                    <img class="logo-img" src="./images/logo.svg" alt="Музыкальная нота">
-                    <a href="#">Music Box</a>
-                </span>
-                <span class="menu grid-4">
-                    <a href="#">Главная</a>
-                    <a href="#">Каталог</a>
-                    <a href="#">Исполнители</a>
-                    <a href="#">Контакты</a>
-                </span>
-                <input class="search" type="search" placeholder="Поиск...">
+    <header class="bg-image">
+        <div class="flex-center">
+            <div class="container mtb-200 flex-column-center" id="page-description">
+                <div class="flex-row-center head">
+                    <span class="flex-row-center logo">
+                        <img class="logo-img" src="./images/logo.svg" alt="Музыкальная нота">
+                        <a href="#">Music Box</a>
+                    </span>
+                    <span class="menu grid-4">
+                        <a href="#">Главная</a>
+                        <a href="#">Каталог</a>
+                        <a href="#">Исполнители</a>
+                        <a href="#">Контакты</a>
+                    </span>
+                    <form class="form-search">
+                        <label for="search"></label>
+                        <input class="search" name="search" type="search" placeholder="Поиск...">
+                    </form>
+                </div>
+                <h1>Онлайн музыка где угодно</h1>
+                <h2>без ограничений</h2>
+                <p class="mt-30">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
+                <form class="flex-row-center form gap-24">
+                    <label for="name" class="label"></label>
+                    <input class="banner-form" name="name" type="text" placeholder="Имя">
+                    <label for="email" class="label"></label>
+                    <input class="banner-form" name="email" type="email" placeholder="Email">
+                    <button class="button" type="submit">Получить доступ</button>
+                </form>
             </div>
-            <div class="banner"></div>
         </div>
     </header>
 </body>

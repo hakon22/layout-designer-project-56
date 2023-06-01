@@ -23,8 +23,6 @@
   } @else {
     font-size: 60px;
     line-height: 90px;
-    font-weight: bold;
-    text-transform: uppercase;
   }
 }
 
@@ -35,8 +33,6 @@
   } @else {
     font-size: 38px;
     line-height: 57px;
-    font-weight: bold;
-    text-transform: uppercase;
   }
 }
 
@@ -46,6 +42,7 @@
     padding: 0 20px;
   } @else {
     width: 1200px;
+    text-align: center;
   }
 }
 
@@ -60,8 +57,70 @@
   }
 }
 
+@mixin head($device: desktop) {
+  @if $device != desktop {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 17px 0 18px 0;
+      font-weight: bold;
+    }
+    .form-search {
+      margin: 0;
+      width: calc(100% - 20px);
+      .search {
+        width: 100%;
+      }
+    }
+  } @else {
+    position: absolute;
+    width: 1200px;
+    top: 25px;
+    font-size: 11px;
+    .logo {
+      margin-right: 60px;
+      .logo-img {
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+      }
+    }
+    .menu {
+      margin-left: 90px;
+    }
+    .form-search {
+      margin-left: auto;
+      .search {
+        font-family: Arial;
+        color: #757575;
+        width: 248px;
+        height: 25px;
+        border: 0;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-size: 13.3px;
+        background: #3c3b3d;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -75,8 +134,20 @@ html {
 
 body {
   width: 100vw;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+}
+
+a,
+.button {
+  color: #cacaca;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -91,67 +162,82 @@ h2 {
   @include container;
 }
 
-.bg-image::before {
+.bg-image {
   position: absolute;
+  z-index: -1;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-image: url("../images/banner.png");
   background-position: center;
   background-size: cover;
-  content: '';
 }
 
 .grid-4 {
   @include grid-4;
 }
 
-
 .head {
-  position: absolute;
-  width: 1200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  top: 25px;
-  font-size: 11px;
-  .logo {
-    margin-right: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    .logo-img {
-      width: 24px;
-      height: 24px;
-      margin-right: 16px;
-    }
-  }
-  .menu {
-    margin-left: 90px;
-  }
-  .search {
-    font-family: Arial;
-    color: #757575;
-    width: 248px;
-    height: 25px;
-    border: 0;
-    padding: 5px 10px;
-    text-transform: uppercase;
-    font-size: 13.3px;
-    background: #3C3B3D;
-    border-radius: 50px;
-    margin-left: auto;
-  }
-}
-
-.head a {
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-decoration: none;
+  @include head;
 }
 
 .flex-center {
   display: flex;
   justify-content: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mtb-200 {
+  margin: 200px 0;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.gap-24 {
+  column-gap: 1.5rem;
+}
+
+.form {
+  max-width: 570px;
+  margin-top: 17px;
+  .banner-form {
+    border: 2px solid #cacaca;
+    min-height: 50px;
+    min-width: 273px;
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .button {
+    padding: 20px 30px;
+    border-radius: 5px;
+    width: 100%;
+    height: 57px;
+    background: #34c176;
+    border: 0;
+    color: #ffffff;
+  }
+}
+
+.label {
+  display: none;
 }
 
 @media (max-width: 770px) {
@@ -165,5 +251,13 @@ h2 {
 
   .container {
     @include container(mobile);
+  }
+
+  .head {
+    @include head(mobile);
+  }
+
+  .form .banner-form {
+      width: 100%;
   }
 }
