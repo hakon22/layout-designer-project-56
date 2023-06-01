@@ -1,0 +1,155 @@
+:root {
+  --white: #fff;
+  --light: #cacaca;
+  --primary-dark: #757575;
+  --dark: #08020d;
+  --grey: #3c3b3d;
+  --green: #34c176;
+  --dark-green: #0c976e;
+}
+
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 700; /* Соответствует значению bold */
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@mixin h1($device: desktop) {
+  @if $device != desktop {
+    font-size: 30px;
+    line-height: 45px;
+  } @else {
+    font-size: 60px;
+    line-height: 90px;
+  }
+}
+
+@mixin h2($device: desktop) {
+  @if $device != desktop {
+    font-size: 18px;
+    line-height: 27px;
+  } @else {
+    font-size: 38px;
+    line-height: 57px;
+  }
+}
+
+@mixin h3($device: desktop) {
+  @if $device != desktop {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+  } @else {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@mixin container($device: desktop) {
+  @if $device != desktop {
+    width: 100vw;
+    padding: 0 20px;
+  } @else {
+    width: 1200px;
+    text-align: center;
+  }
+}
+
+@mixin grid($colums, $column-gap, $value: max-content) {
+  display: grid;
+  grid-template-columns: repeat($colums, $value);
+  column-gap: #{$column-gap}px;
+}
+
+@mixin pt($px) {
+  padding-top: #{$px}px;
+}
+
+@mixin bg-image($num) {
+  background-image: url("../images/subscribe_#{$num}.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin head($device: desktop) {
+  @if $device != desktop {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 17px 0 18px 0;
+      font-weight: bold;
+    }
+    .form-search {
+      margin: 0;
+      width: calc(100% - 20px);
+      .search {
+        width: 100%;
+      }
+    }
+  } @else {
+    position: absolute;
+    width: 1200px;
+    top: 25px;
+    font-size: 11px;
+    .logo {
+      margin-right: 60px;
+      .logo-img {
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+      }
+    }
+    .menu {
+      margin-left: 90px;
+    }
+    .form-search {
+      margin-left: auto;
+      .search {
+        font-family: Arial;
+        color: var(--primary-dark);
+        width: 248px;
+        height: 25px;
+        border: 0;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-size: 13.3px;
+        background: var(--grey);
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+@mixin grid-3($device: desktop) {
+  @if $device != desktop {
+    width: 100vw;
+    padding: 0 20px;
+  } @else {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 24px;
+  }
+}

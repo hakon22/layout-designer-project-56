@@ -1,0 +1,25 @@
+@media (max-width: 770px) {
+  h1 {
+    @include h1(mobile);
+  }
+
+  h2 {
+    @include h2(mobile);
+  }
+
+  h3 {
+    @include h3(mobile);
+  }
+
+  .container {
+    @include container(mobile);
+  }
+
+  .head {
+    @include head(mobile);
+  }
+
+  .form .banner-form {
+      width: 100%;
+  }
+}

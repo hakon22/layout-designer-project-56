@@ -9,17 +9,17 @@
 </head>
 <body>
     <header class="bg-image">
-        <div class="flex-center">
-            <div class="container mtb-200 flex-column-center" id="page-description">
+        <section class="flex-center" id="page-description">
+            <div class="container mtb-200 flex-column-center">
                 <div class="flex-row-center head">
                     <span class="flex-row-center logo">
                         <img class="logo-img" src="./images/logo.svg" alt="Музыкальная нота">
                         <a href="#">Music Box</a>
                     </span>
                     <span class="menu grid-4">
-                        <a href="#">Главная</a>
+                        <a href="#page-description">Главная</a>
                         <a href="#">Каталог</a>
-                        <a href="#">Исполнители</a>
+                        <a href="./artist.html">Исполнители</a>
                         <a href="#">Контакты</a>
                     </span>
                     <form class="form-search">
@@ -38,7 +38,34 @@
                     <button class="button" type="submit">Получить доступ</button>
                 </form>
             </div>
-        </div>
+        </section>
     </header>
+    <main>
+        <section class="flex-center pt-100" id="page-pricing">
+            <div class="container flex-column-center">
+                <h2>Формы подписки</h2>
+                <div class="pt-50 grid-6">
+                    <div class="col-2 pricing-item bg-free">
+                        <h3>Бесплатная</h3>
+                        <p class="pricing-value"></p>
+                        <a href="#">Оформить</a>
+                        <p class="pricing-footer"></p>
+                    </div>
+                    <div class="col-2 pricing-item bg-standart">
+                        <h3>Стандартная</h3>
+                        <p class="pricing-value"></p>
+                        <a href="#">Оформить</a>
+                        <p class="pricing-footer"></p>
+                    </div>
+                    <div class="col-2 pricing-item bg-premium">
+                        <h3>Премиум</h3>
+                        <p class="pricing-value"></p>
+                        <a href="#">Оформить</a>
+                        <p class="pricing-footer"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
