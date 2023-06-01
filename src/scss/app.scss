@@ -1,0 +1,169 @@
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 700; /* Соответствует значению bold */
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@mixin h1($device: desktop) {
+  @if $device != desktop {
+    font-size: 30px;
+    line-height: 60px;
+  } @else {
+    font-size: 60px;
+    line-height: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+@mixin h2($device: desktop) {
+  @if $device != desktop {
+    font-size: 18px;
+    line-height: 27px;
+  } @else {
+    font-size: 38px;
+    line-height: 57px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+@mixin container($device: desktop) {
+  @if $device != desktop {
+    width: 100vw;
+    padding: 0 20px;
+  } @else {
+    width: 1200px;
+  }
+}
+
+@mixin grid-4($device: desktop) {
+  @if $device != desktop {
+    width: 100vw;
+    padding: 0 20px;
+  } @else {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 24px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cacaca;
+  background-color: #08020d;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+.container {
+  @include container;
+}
+
+.bg-image::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  content: '';
+}
+
+.grid-4 {
+  @include grid-4;
+}
+
+
+.head {
+  position: absolute;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 25px;
+  font-size: 11px;
+  .logo {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo-img {
+      width: 24px;
+      height: 24px;
+      margin-right: 16px;
+    }
+  }
+  .menu {
+    margin-left: 90px;
+  }
+  .search {
+    font-family: Arial;
+    color: #757575;
+    width: 248px;
+    height: 25px;
+    border: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 13.3px;
+    background: #3C3B3D;
+    border-radius: 50px;
+    margin-left: auto;
+  }
+}
+
+.head a {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 770px) {
+  h1 {
+    @include h1(mobile);
+  }
+
+  h2 {
+    @include h2(mobile);
+  }
+
+  .container {
+    @include container(mobile);
+  }
+}

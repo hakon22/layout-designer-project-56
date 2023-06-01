@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-weight: 500;
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-weight: 700; /* Соответствует значению bold */
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cacaca;
+  background-color: #08020d;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 1200px;
+}
+
+.bg-image::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 24px;
+}
+
+.head {
+  position: absolute;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 25px;
+  font-size: 11px;
+}
+.head .logo {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.head .logo .logo-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+.head .menu {
+  margin-left: 90px;
+}
+.head .search {
+  font-family: Arial;
+  color: #757575;
+  width: 248px;
+  height: 25px;
+  border: 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-size: 13.3px;
+  background: #3C3B3D;
+  border-radius: 50px;
+  margin-left: auto;
+}
+
+.head a {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 770px) {
+  h1 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .container {
+    width: 100vw;
+    padding: 0 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
