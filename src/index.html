@@ -9,8 +9,8 @@
 </head>
 <body>
     <header class="bg-image">
-        <section class="flex-center" id="page-description">
-            <div class="container mtb-200 flex-column-center">
+        <section class="flex-center">
+            <div class="container mtb-200 flex-column-center" id="page-description">
                 <div class="flex-row-center head">
                     <span class="flex-row-center logo">
                         <img class="logo-img" src="./images/logo.svg" alt="Музыкальная нота">
@@ -35,34 +35,35 @@
                     <input class="banner-form" name="name" type="text" placeholder="Имя">
                     <label for="email" class="label"></label>
                     <input class="banner-form" name="email" type="email" placeholder="Email">
-                    <button class="button" type="submit">Получить доступ</button>
+                    <button class="btn" type="submit">Получить доступ</button>
                 </form>
             </div>
         </section>
     </header>
     <main>
-        <section class="flex-center pt-100" id="page-pricing">
-            <div class="container flex-column-center">
+        <section class="flex-center pt-100">
+            <div class="container flex-column-center" id="page-pricing">
                 <h2>Формы подписки</h2>
                 <div class="pt-50 grid-6">
                     <div class="col-2 pricing-item bg-free">
                         <h3>Бесплатная</h3>
-                        <p class="pricing-value"></p>
-                        <a href="#">Оформить</a>
-                        <p class="pricing-footer"></p>
+                        <span class="pricing-value">0 <span class="currency">Руб.</span></span>
+                        <a class="btn flex-center" href="#">Оформить</a>
+                        <p class="pricing-footer">Оплата в месяц. Бесплатный тариф предоставляет доступ ко всей коллекции музыки. Присутствует реклама</p>
                     </div>
                     <div class="col-2 pricing-item bg-standart">
                         <h3>Стандартная</h3>
-                        <p class="pricing-value"></p>
-                        <a href="#">Оформить</a>
-                        <p class="pricing-footer"></p>
+                        <span class="pricing-value">250 <span class="currency">Руб.</span></span>
+                        <a class="btn flex-center" href="#">Оформить</a>
+                        <p class="pricing-footer">Оплата в месяц. Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве</p>
                     </div>
                     <div class="col-2 pricing-item bg-premium">
                         <h3>Премиум</h3>
-                        <p class="pricing-value"></p>
-                        <a href="#">Оформить</a>
-                        <p class="pricing-footer"></p>
+                        <span class="pricing-value">500 <span class="currency">Руб.</span></span>
+                        <a class="btn flex-center" href="#">Оформить</a>
+                        <p class="pricing-footer">Оплата в месяц. Премиум тариф предоставляет доступ ко всей коллекции музыки в высоком качестве</p>
                     </div>
+                    <p class="col-6">На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете скачать все композиции на ваше устройство и слушать музыку без подключения к интернету</p>
                 </div>
             </div>
         </section>
