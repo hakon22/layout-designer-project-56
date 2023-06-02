@@ -107,6 +107,9 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  &.reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 .mtb-200 {
@@ -165,4 +168,16 @@ h3 {
 
 .pricing-item {
   @include pricing-item;
+}
+
+.news {
+  @include news;
+}
+
+.flex-50 {
+  flex: 1 1 575px;
+}
+
+.gap-row-65 {
+  row-gap: 65px;
 }

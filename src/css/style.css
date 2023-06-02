@@ -7,6 +7,7 @@
   --grey: #3c3b3d;
   --green: #34c176;
   --dark-green: #0c976e;
+  --orange: #f89202;
 }
 
 @font-face {
@@ -177,6 +178,9 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
 }
+.flex-row-center.reverse {
+  flex-direction: row-reverse;
+}
 
 .mtb-200 {
   margin: 200px 0;
@@ -260,7 +264,7 @@ h3 {
   border: 1px solid var(--white);
   border-radius: 5px;
 }
-.pricing-item .btn:hover {
+.pricing-item .btn.btn:hover {
   background: rgba(136, 116, 116, 0.5);
 }
 .pricing-item .pricing-footer {
@@ -270,6 +274,54 @@ h3 {
 }
 .pricing-item:hover {
   transform: scale(1.1);
+}
+
+.news {
+  column-gap: 50px;
+  align-items: flex-start;
+  text-align: start;
+}
+.news .news-body h3 {
+  text-transform: capitalize;
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.news .news-body p {
+  margin-bottom: 25px;
+}
+.news .news-body .news-author {
+  font-size: 12px;
+  line-height: 1.6;
+  justify-content: start;
+  column-gap: 16px;
+}
+.news .news-body .news-author .font-orange-upper {
+  color: var(--orange);
+  text-transform: uppercase;
+}
+.news .news-body .btn {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  width: 135px;
+  height: 53px;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 16px 30px;
+}
+.news .news-body .btn.btn:hover {
+  background: rgba(136, 116, 116, 0.5);
+}
+
+.flex-50 {
+  flex: 1 1 575px;
+}
+
+.gap-row-65 {
+  row-gap: 65px;
 }
 
 @media (max-width: 770px) {
@@ -314,6 +366,13 @@ h3 {
     width: calc(100% - 20px);
   }
   .head .form-search .search {
+    width: 100%;
+  }
+  .news {
+    width: 100%;
+  }
+  .news .flex-50 {
+    flex: none;
     width: 100%;
   }
   .form .banner-form {

@@ -19,9 +19,14 @@
     @include head(mobile);
   }
 
+  .news {
+    @include news(mobile);
+  }
+
   .form .banner-form {
       width: 100%;
   }
+
   .grid-6 {
     display: flex;
     flex-direction: column;
