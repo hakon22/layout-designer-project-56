@@ -4,9 +4,12 @@
   --primary-dark: #757575;
   --dark: #08020d;
   --grey: #3c3b3d;
+  --light-gray: #E0E0E0;
   --green: #34c176;
   --dark-green: #0c976e;
   --orange: #f89202;
+  --terracotta: #95390c;
+  --light-terracotta: #bd4c14;
 }
 
 @font-face {
@@ -195,10 +198,15 @@
 
 @mixin news($device: desktop) {
   @if $device != desktop {
-    width: 100%;
     .flex-50 {
-      flex: none;
-      width: 100%;
+      .img-news {
+        width: 100%;
+      }
+      h3 {
+        font-size: 16px;
+        margin-bottom: 16px;
+        margin-top: 50px;
+      }
     }
   } @else {
     column-gap: 50px;
@@ -211,6 +219,7 @@
         line-height: 1.5;
         font-weight: normal;
         margin-bottom: 30px;
+        color: var(--white);
       }
       p {
         margin-bottom: 25px;
@@ -239,6 +248,62 @@
           background: rgba(136, 116, 116, 0.5);
         }
       }
+    }
+  }
+}
+
+@mixin img-app($device: desktop) {
+  @if $device != desktop {
+    padding-left: 0;
+  } @else {
+    padding-left: 144px;
+  }
+}
+
+@mixin footer($device: desktop) {
+  @if $device != desktop {
+    padding: 3rem 20px;
+    .grid-footer {
+      @include grid(1, 0);
+      row-gap: 30px;
+    }
+  } @else {
+    text-align: left;
+    padding: 3rem 0;
+    h2 {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 15px;
+    }
+    a {
+      display: block;
+      text-transform: none;
+    }
+    .grid-4 {
+      grid-template-rows: repeat(2, max-content);
+      a {
+        display: grid;
+        align-items: center;
+      }
+      h2 {
+        grid-column: span 4;
+        margin-bottom: 20px;
+      }
+    }
+    .grid-footer {
+      width: 100%;
+      @include grid(4, 40, 1fr);
+    }
+  }
+}
+
+@mixin footer-bottom($device: desktop) {
+  @if $device != desktop {
+    padding: 2rem 20px;
+  } @else {
+    padding: 2rem 0;
+    a {
+      text-transform: none;
     }
   }
 }

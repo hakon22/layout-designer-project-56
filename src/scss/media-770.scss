@@ -38,4 +38,33 @@
       }
     }
   }
+
+  .pt-100 {
+    @include pt(100);
+  }
+
+  .flex-row-center.flex-left-top {
+    flex-direction: column-reverse;
+    .img-app {
+      @include img-app(mobile);
+    }
+    .img-align-mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .footer {
+    @include footer(mobile);
+  }
+
+  .footer-bottom {
+    @include footer-bottom(mobile);
+  }
+
+  .grid-footer-2 {
+    @include grid(1, 0);
+    row-gap: 16px;
+    text-align: left;
+  }
 }
