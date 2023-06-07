@@ -54,6 +54,12 @@ h3 {
   background-size: cover;
 }
 
+.bg-image-2 {
+  background-image: url("../images/Morten\ Harket.png");
+  background-position: center;
+  background-size: cover;
+}
+
 .bg-free {
   @include bg-image(1);
 }
@@ -72,6 +78,7 @@ h3 {
 
 .grid-6 {
   width: 100%;
+
   @include grid(6, 47, 1fr);
   row-gap: 47px;
 }
@@ -103,13 +110,20 @@ h3 {
 
 .flex-row-center {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+
   &.reverse {
     flex-direction: row-reverse;
   }
+}
+
+.flex-column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 .flex-left-top {
@@ -137,6 +151,10 @@ h3 {
   margin-top: 30px;
 }
 
+.mt-16 {
+  margin-top: 16px;
+}
+
 .mb-100 {
   margin-bottom: 100px;
 }
@@ -145,9 +163,33 @@ h3 {
   column-gap: 1.5rem;
 }
 
+.flex-50 {
+  flex: 1 1 575px;
+}
+
+.flex-50-pr {
+  flex: 1 1 50%;
+
+  .btn {
+    display: block;
+    width: 131px;
+    border-radius: 32px;
+    padding: 16px 40px;
+    font-size: 12.8px;
+    text-transform: none;
+    background-color: var(--terracotta);
+    margin-top: 16px;
+
+    &.btn:hover {
+      background-color: var(--light-terracotta);
+    }
+  }
+}
+
 .form {
   max-width: 570px;
   margin-top: 17px;
+
   .banner-form {
     border: 2px solid var(--light);
     min-height: 50px;
@@ -160,6 +202,7 @@ h3 {
     background: transparent;
     color: var(--white);
   }
+
   .btn {
     padding: 20px 30px;
     border-radius: 5px;
@@ -167,9 +210,10 @@ h3 {
     height: 57px;
     background: var(--green);
     border: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     color: var(--white);
   }
+
   .btn:hover {
     background: var(--dark-green);
   }
@@ -185,27 +229,6 @@ h3 {
 
 .news {
   @include news;
-}
-
-.flex-50 {
-  flex: 1 1 575px;
-}
-
-.flex-50-pr {
-  flex: 1 1 50%;
-  .btn {
-    display: block;
-    width: 131px;
-    border-radius: 32px;
-    padding: 16px 40px;
-    font-size: 12.8px;
-    text-transform: none;
-    background-color: var(--terracotta);
-    margin-top: 16px;
-    &.btn:hover {
-      background-color: var(--light-terracotta);
-    }
-  }
 }
 
 .gap-row-65 {
@@ -236,6 +259,19 @@ h3 {
 
 .grid-footer-2 {
   @include grid(5, 16);
+}
+
+.grid-2 {
+  @include grid(2, 0);
+  column-gap: 1.5rem;
+}
+
+.grid-2 .btn {
+  width: 200px;
+  height: 62px;
+  padding: 20px 30px;
+  font-size: 12.8px;
+  text-transform: uppercase;
 }
 
 .border-top {
