@@ -83,6 +83,13 @@ h3 {
   row-gap: 47px;
 }
 
+.grid-popular-2 {
+  width: 100%;
+
+  @include grid(2, 50, 1fr);
+  row-gap: 25px;
+}
+
 .col-2 {
   grid-column: span 2;
 }
@@ -272,6 +279,43 @@ h3 {
   padding: 20px 30px;
   font-size: 12.8px;
   text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+
+  &.mix {
+    background-color: var(--purple);
+
+    .grid-2::before {
+      width: 20px;
+      height: 20px;
+      filter: invert(1);
+      content: url('../images/play-button.svg');
+    }
+
+    &.mix:hover {
+      background-color: var(--light-purple);
+    }
+  }
+
+  &.save {
+    background-color: var(--terracotta);
+
+    .grid-2::before {
+      width: 20px;
+      height: 17.79px;
+      filter: invert(1);
+      content: url('../images/heart.svg');
+    }
+
+    &.save:hover {
+      background-color: var(--light-terracotta);
+    }
+  }
+
+  .grid-2 {
+    column-gap: 16px;
+    align-items: center;
+  }
 }
 
 .border-top {
@@ -281,4 +325,62 @@ h3 {
 .grid-footer a,
 .grid-footer-2 a {
   color: var(--light-gray);
+}
+
+.popular-track {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 15px;
+  align-items: center;
+
+  .img-track {
+    width: 55px;
+    height: 55px;
+  }
+
+  .track-info {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 12.8px;
+      line-height: 19.2px;
+      font-weight: bold;
+      color: var(--white);
+    }
+
+    p {
+      font-size: 12.8px;
+      line-height: 19.2px;
+      font-weight: normal;
+    }
+  }
+}
+
+.grid-discography-5,
+.grid-similar-5 {
+  @include grid(4, 50);
+  row-gap: 25px;
+
+  .discography-item {
+    text-align: left;
+  }
+  .discography-item,
+  .similar-item {
+    row-gap: 18px;
+
+    .img-discography,
+    .img-similar {
+      width: 250px;
+      height: 250px;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: bold;
+      color: var(--white);
+      text-transform: capitalize;
+    }
+  }
 }

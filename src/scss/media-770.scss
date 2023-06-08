@@ -1,4 +1,4 @@
-@media (width <= 770px) {
+@media (width < 770px) {
   h1 {
     @include h1(mobile);
   }
@@ -46,6 +46,11 @@
 
     grid-template-rows: repeat(2, max-content);
     row-gap: 1.5rem;
+
+    .btn .grid-2 {
+      @include grid(2, 16);
+      grid-template-rows: none;
+    }
   }
 
   .pt-100 {
@@ -77,5 +82,29 @@
     @include grid(1, 0);
     row-gap: 16px;
     text-align: left;
+  }
+
+  .mtb-200 {
+    margin: 225px 0;
+  }
+
+  .grid-popular-2 {
+    @include grid(1, 0, 1fr);
+  }
+
+  .grid-discography-5,
+  .grid-similar-5 {
+    @include grid(2, 50, 138px);
+  
+    .discography-item,
+    .similar-item {
+      justify-content: start;
+
+      .img-discography,
+      .img-similar {
+        width: 137px;
+        height: 137px;
+      }
+    }
   }
 }
