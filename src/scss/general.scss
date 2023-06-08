@@ -193,6 +193,56 @@ h3 {
   }
 }
 
+.grid-2 {
+  @include grid(2, 0);
+  column-gap: 1.5rem;
+}
+
+.grid-2 .btn {
+  width: 200px;
+  height: 62px;
+  padding: 20px 30px;
+  font-size: 12.8px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+
+  &.mix {
+    background-color: var(--purple);
+
+    .grid-2::before {
+      width: 20px;
+      height: 20px;
+      filter: invert(1);
+      content: url('../images/play-button.svg');
+    }
+
+    &.mix:hover {
+      background-color: var(--light-purple);
+    }
+  }
+
+  &.save {
+    background-color: var(--terracotta);
+
+    .grid-2::before {
+      width: 20px;
+      height: 17.79px;
+      filter: invert(1);
+      content: url('../images/heart.svg');
+    }
+
+    &.save:hover {
+      background-color: var(--light-terracotta);
+    }
+  }
+
+  .grid-2 {
+    column-gap: 16px;
+    align-items: center;
+  }
+}
+
 .form {
   max-width: 570px;
   margin-top: 17px;
@@ -255,7 +305,6 @@ h3 {
   background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
 }
 
-
 .footer {
   @include footer;
 }
@@ -266,56 +315,6 @@ h3 {
 
 .grid-footer-2 {
   @include grid(5, 16);
-}
-
-.grid-2 {
-  @include grid(2, 0);
-  column-gap: 1.5rem;
-}
-
-.grid-2 .btn {
-  width: 200px;
-  height: 62px;
-  padding: 20px 30px;
-  font-size: 12.8px;
-  text-transform: uppercase;
-  border: 0;
-  border-radius: 5px;
-
-  &.mix {
-    background-color: var(--purple);
-
-    .grid-2::before {
-      width: 20px;
-      height: 20px;
-      filter: invert(1);
-      content: url('../images/play-button.svg');
-    }
-
-    &.mix:hover {
-      background-color: var(--light-purple);
-    }
-  }
-
-  &.save {
-    background-color: var(--terracotta);
-
-    .grid-2::before {
-      width: 20px;
-      height: 17.79px;
-      filter: invert(1);
-      content: url('../images/heart.svg');
-    }
-
-    &.save:hover {
-      background-color: var(--light-terracotta);
-    }
-  }
-
-  .grid-2 {
-    column-gap: 16px;
-    align-items: center;
-  }
 }
 
 .border-top {
@@ -365,6 +364,7 @@ h3 {
   .discography-item {
     text-align: left;
   }
+
   .discography-item,
   .similar-item {
     row-gap: 18px;
