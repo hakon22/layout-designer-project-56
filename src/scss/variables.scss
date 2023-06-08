@@ -315,6 +315,7 @@
 
     .grid-4 {
       grid-template-rows: repeat(2, max-content);
+      column-gap: 0;
 
       a {
         display: grid;

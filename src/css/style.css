@@ -464,6 +464,7 @@ h3 {
 }
 .footer .grid-4 {
   grid-template-rows: repeat(2, max-content);
+  column-gap: 0;
 }
 .footer .grid-4 a {
   display: grid;
