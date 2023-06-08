@@ -126,7 +126,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 50px;
-  row-gap: 50px;
+  row-gap: 43px;
 }
 
 .grid-popular-2 {
