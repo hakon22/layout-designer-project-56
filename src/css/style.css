@@ -80,7 +80,7 @@ h3 {
 }
 
 .container {
-  min-width: 1200px;
+  width: 1200px;
   text-align: center;
 }
 
@@ -528,10 +528,8 @@ h3 {
   row-gap: 25px;
 }
 .grid-discography-5 .discography-item {
-  text-align: left;
-}
-.grid-discography-5 .discography-item {
   row-gap: 18px;
+  text-align: left;
 }
 .grid-discography-5 .discography-item .img-discography {
   width: 250px;
@@ -569,7 +567,7 @@ h3 {
   text-transform: capitalize;
 }
 
-@media (width < 770px) {
+@media (width < 1200px) {
   h1 {
     font-size: 30px;
     line-height: 45px;

@@ -1,4 +1,4 @@
-@media (width < 770px) {
+@media (width < 1200px) {
   h1 {
     @include h1(mobile);
   }
