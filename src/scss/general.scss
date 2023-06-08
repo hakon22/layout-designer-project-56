@@ -79,8 +79,8 @@ h3 {
 .grid-6 {
   width: 100%;
 
-  @include grid(6, 47, 1fr);
-  row-gap: 47px;
+  @include grid(6, 50, 1fr);
+  row-gap: 50px;
 }
 
 .grid-popular-2 {
@@ -410,7 +410,7 @@ h3 {
   padding-bottom: 200px;
 }
 
-.ptb-223 {
-  padding-top: 225px;
+.ptb-250 {
+  padding-top: 250px;
   padding-bottom: 223px;
 }

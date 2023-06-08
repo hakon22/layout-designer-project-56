@@ -124,8 +124,8 @@ h3 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 47px;
-  row-gap: 47px;
+  column-gap: 50px;
+  row-gap: 50px;
 }
 
 .grid-popular-2 {
@@ -378,7 +378,8 @@ h3 {
 .pricing-item .pricing-footer {
   font-size: 12.8px;
   line-height: 1.5;
-  margin: 64px 0;
+  margin-top: 64px;
+  margin-bottom: 87px;
 }
 .pricing-item:hover {
   transform: scale(1.1);
@@ -574,8 +575,8 @@ h3 {
   padding-bottom: 200px;
 }
 
-.ptb-223 {
-  padding-top: 225px;
+.ptb-250 {
+  padding-top: 250px;
   padding-bottom: 223px;
 }
 
@@ -638,7 +639,6 @@ h3 {
   .grid-6 {
     display: flex;
     flex-direction: column;
-    row-gap: 26px;
   }
   .grid-6 .pricing-item {
     padding-top: 16px;
@@ -698,8 +698,8 @@ h3 {
     row-gap: 16px;
     text-align: left;
   }
-  .mtb-200 {
-    margin-top: 250px;
+  .ptb-200 {
+    padding-top: 250px;
   }
   .grid-popular-2 {
     display: grid;
