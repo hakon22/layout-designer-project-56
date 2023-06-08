@@ -571,6 +571,11 @@ h3 {
 
 .ptb-200 {
   padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.ptb-223 {
+  padding-top: 200px;
   padding-bottom: 223px;
 }
 
