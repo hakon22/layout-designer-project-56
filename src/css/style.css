@@ -98,19 +98,16 @@ h3 {
 
 .bg-free {
   background-image: url("../images/subscribe_1.png");
-  background-position: center;
   background-size: cover;
 }
 
 .bg-standart {
   background-image: url("../images/subscribe_2.png");
-  background-position: center;
   background-size: cover;
 }
 
 .bg-premium {
   background-image: url("../images/subscribe_3.png");
-  background-position: center;
   background-size: cover;
 }
 
@@ -222,6 +219,10 @@ h3 {
 
 .pt-50 {
   padding-top: 50px;
+}
+
+.pt-46 {
+  padding-top: 46px;
 }
 
 .mt-48 {
@@ -645,7 +646,7 @@ h3 {
   }
   .grid-6 .pricing-item {
     padding-top: 16px;
-    height: 595px;
+    height: 621px;
   }
   .grid-6 .pricing-item h3 {
     font-weight: bold;

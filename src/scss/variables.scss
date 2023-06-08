@@ -85,7 +85,6 @@
 
 @mixin bg-image($num) {
   background-image: url("../images/subscribe_#{$num}.png");
-  background-position: center;
   background-size: cover;
 }
 
@@ -162,7 +161,7 @@
 @mixin pricing-item($device: desktop) {
   @if $device != desktop {
     padding-top: 16px;
-    height: 595px;
+    height: 621px;
 
     h3 {
     font-weight: bold;
