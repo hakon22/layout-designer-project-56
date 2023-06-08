@@ -89,7 +89,6 @@ h3 {
   background-image: url("../images/banner.png");
   background-position: center;
   background-size: cover;
-  width: 100%;
 }
 
 .bg-image-2 {
@@ -687,8 +686,6 @@ h3 {
   }
   .footer {
     padding-left: 20px;
-    padding-top: 62px;
-    padding-bottom: 72px;
   }
   .footer .grid-footer {
     display: grid;
@@ -697,7 +694,7 @@ h3 {
     row-gap: 30px;
   }
   .footer-bottom {
-    padding: 2rem 20px;
+    padding-left: 20px;
   }
   .grid-footer-2 {
     display: grid;

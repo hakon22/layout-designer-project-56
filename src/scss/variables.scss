@@ -290,8 +290,6 @@
 @mixin footer($device: desktop) {
   @if $device != desktop {
     padding-left: 20px;
-    padding-top: 62px;
-    padding-bottom: 72px;
 
     .grid-footer {
       @include grid(1, 0);
@@ -338,7 +336,7 @@
 
 @mixin footer-bottom($device: desktop) {
   @if $device != desktop {
-    padding: 2rem 20px;
+    padding-left: 20px;
   } @else {
     padding-top: 40px;
     padding-bottom: 50px;
