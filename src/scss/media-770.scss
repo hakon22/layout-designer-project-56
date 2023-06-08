@@ -1,4 +1,8 @@
 @media (max-width: 1240px) {
+  html {
+    color: var(--white);
+  }
+
   h1 {
     @include h1(mobile);
   }
@@ -24,7 +28,7 @@
   }
 
   .form .banner-form {
-      width: 100%;
+    width: 100%;
   }
 
   .grid-6 {
