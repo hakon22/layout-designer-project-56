@@ -444,7 +444,8 @@ h3 {
 
 .footer {
   text-align: left;
-  padding: 3rem 0;
+  padding-top: 62px;
+  padding-bottom: 72px;
 }
 .footer h2 {
   font-size: 18px;
@@ -474,7 +475,8 @@ h3 {
 }
 
 .footer-bottom {
-  padding: 2rem 0;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 .footer-bottom a {
   text-transform: none;
@@ -671,7 +673,9 @@ h3 {
     text-align: center;
   }
   .footer {
-    padding: 3rem 20px;
+    padding-left: 20px;
+    padding-top: 62px;
+    padding-bottom: 72px;
   }
   .footer .grid-footer {
     display: grid;

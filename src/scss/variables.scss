@@ -289,7 +289,9 @@
 
 @mixin footer($device: desktop) {
   @if $device != desktop {
-    padding: 3rem 20px;
+    padding-left: 20px;
+    padding-top: 62px;
+    padding-bottom: 72px;
 
     .grid-footer {
       @include grid(1, 0);
@@ -297,7 +299,8 @@
     }
   } @else {
     text-align: left;
-    padding: 3rem 0;
+    padding-top: 62px;
+    padding-bottom: 72px;
 
     h2 {
       font-size: 18px;
@@ -336,7 +339,8 @@
   @if $device != desktop {
     padding: 2rem 20px;
   } @else {
-    padding: 2rem 0;
+    padding-top: 40px;
+    padding-bottom: 50px;
 
     a {
       text-transform: none;
