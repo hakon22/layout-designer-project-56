@@ -162,6 +162,7 @@
 @mixin pricing-item($device: desktop) {
   @if $device != desktop {
     padding-top: 16px;
+    height: 595px;
 
     h3 {
     font-weight: bold;
