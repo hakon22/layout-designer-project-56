@@ -356,7 +356,32 @@ h3 {
   }
 }
 
-.grid-discography-5,
+.grid-discography-5 {
+  @include grid(4, 50);
+  row-gap: 25px;
+
+  .discography-item {
+    text-align: left;
+  }
+
+  .discography-item {
+    row-gap: 18px;
+
+    .img-discography {
+      width: 250px;
+      height: 250px;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: bold;
+      color: var(--white);
+      text-transform: capitalize;
+    }
+  }
+}
+
 .grid-similar-5 {
   @include grid(4, 50);
   row-gap: 25px;
@@ -365,11 +390,9 @@ h3 {
     text-align: left;
   }
 
-  .discography-item,
   .similar-item {
     row-gap: 18px;
 
-    .img-discography,
     .img-similar {
       width: 250px;
       height: 250px;

@@ -92,15 +92,25 @@
     @include grid(1, 0, 1fr);
   }
 
-  .grid-discography-5,
+  .grid-discography-5 {
+    @include grid(2, 50, 138px);
+  
+    .discography-item {
+      justify-content: start;
+
+      .img-discography {
+        width: 137px;
+        height: 137px;
+      }
+    }
+  }
+
   .grid-similar-5 {
     @include grid(2, 50, 138px);
   
-    .discography-item,
     .similar-item {
       justify-content: start;
 
-      .img-discography,
       .img-similar {
         width: 137px;
         height: 137px;

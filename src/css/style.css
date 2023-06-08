@@ -20,19 +20,16 @@
   font-family: Roboto;
   src: url("../fonts/Roboto-Regular.ttf");
 }
-
 @font-face {
   font-weight: 500;
   font-family: Roboto;
   src: url("../fonts/Roboto-Medium.ttf");
 }
-
 @font-face {
   font-weight: 700; /* Соответствует значению bold */
   font-family: Roboto;
   src: url("../fonts/Roboto-Bold.ttf");
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -83,7 +80,7 @@ h3 {
 }
 
 .container {
-  width: 1200px;
+  min-width: 1200px;
   text-align: center;
 }
 
@@ -153,25 +150,20 @@ h3 {
   top: 25px;
   font-size: 11px;
 }
-
 .head .logo {
   margin-right: 60px;
 }
-
 .head .logo .logo-img {
   width: 24px;
   height: 24px;
   margin-right: 16px;
 }
-
 .head .menu {
   margin-left: 90px;
 }
-
 .head .form-search {
   margin-left: auto;
 }
-
 .head .form-search .search {
   font-family: Arial, sans-serif;
   color: var(--primary-dark);
@@ -204,7 +196,6 @@ h3 {
   align-items: center;
   flex-flow: row wrap;
 }
-
 .flex-row-center.reverse {
   flex-direction: row-reverse;
 }
@@ -260,7 +251,6 @@ h3 {
 .flex-50-pr {
   flex: 1 1 50%;
 }
-
 .flex-50-pr .btn {
   display: block;
   width: 131px;
@@ -271,16 +261,59 @@ h3 {
   background-color: var(--terracotta);
   margin-top: 16px;
 }
-
 .flex-50-pr .btn.btn:hover {
   background-color: var(--light-terracotta);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 0px;
+  column-gap: 1.5rem;
+}
+
+.grid-2 .btn {
+  width: 200px;
+  height: 62px;
+  padding: 20px 30px;
+  font-size: 12.8px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+}
+.grid-2 .btn.mix {
+  background-color: var(--purple);
+}
+.grid-2 .btn.mix .grid-2::before {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  content: url("../images/play-button.svg");
+}
+.grid-2 .btn.mix.mix:hover {
+  background-color: var(--light-purple);
+}
+.grid-2 .btn.save {
+  background-color: var(--terracotta);
+}
+.grid-2 .btn.save .grid-2::before {
+  width: 20px;
+  height: 17.79px;
+  filter: invert(1);
+  content: url("../images/heart.svg");
+}
+.grid-2 .btn.save.save:hover {
+  background-color: var(--light-terracotta);
+}
+.grid-2 .btn .grid-2 {
+  column-gap: 16px;
+  align-items: center;
 }
 
 .form {
   max-width: 570px;
   margin-top: 17px;
 }
-
 .form .banner-form {
   border: 2px solid var(--light);
   min-height: 50px;
@@ -293,7 +326,6 @@ h3 {
   background: transparent;
   color: var(--white);
 }
-
 .form .btn {
   padding: 20px 30px;
   border-radius: 5px;
@@ -304,7 +336,6 @@ h3 {
   font-family: Arial, sans-serif;
   color: var(--white);
 }
-
 .form .btn:hover {
   background: var(--dark-green);
 }
@@ -320,11 +351,9 @@ h3 {
   color: var(--white);
   transition: 0.5s;
 }
-
 .pricing-item h3 {
   margin-bottom: 200px;
 }
-
 .pricing-item .pricing-value {
   display: inline-block;
   margin-bottom: 40px;
@@ -332,30 +361,25 @@ h3 {
   line-height: 1;
   text-transform: uppercase;
 }
-
 .pricing-item .pricing-value .currency {
   font-size: 32px;
   line-height: 1.5;
   vertical-align: top;
 }
-
 .pricing-item .btn {
   width: 100%;
   height: 66px;
   border: 1px solid var(--white);
   border-radius: 5px;
 }
-
 .pricing-item .btn.btn:hover {
   background: rgba(136, 116, 116, 0.5);
 }
-
 .pricing-item .pricing-footer {
   font-size: 12.8px;
   line-height: 1.5;
   margin: 64px 0;
 }
-
 .pricing-item:hover {
   transform: scale(1.1);
 }
@@ -365,7 +389,6 @@ h3 {
   align-items: flex-start;
   text-align: start;
 }
-
 .news .news-body h3 {
   text-transform: capitalize;
   font-size: 30px;
@@ -374,23 +397,19 @@ h3 {
   margin-bottom: 30px;
   color: var(--white);
 }
-
 .news .news-body p {
   margin-bottom: 25px;
 }
-
 .news .news-body .news-author {
   font-size: 12px;
   line-height: 1.6;
   justify-content: start;
   column-gap: 16px;
 }
-
 .news .news-body .news-author .font-orange-upper {
   color: var(--orange);
   text-transform: uppercase;
 }
-
 .news .news-body .btn {
   display: block;
   font-size: 12px;
@@ -402,7 +421,6 @@ h3 {
   margin-top: 50px;
   padding: 16px 30px;
 }
-
 .news .news-body .btn.btn:hover {
   background: rgba(136, 116, 116, 0.5);
 }
@@ -428,32 +446,26 @@ h3 {
   text-align: left;
   padding: 3rem 0;
 }
-
 .footer h2 {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 15px;
 }
-
 .footer a {
   display: block;
   text-transform: none;
 }
-
 .footer .grid-4 {
   grid-template-rows: repeat(2, max-content);
 }
-
 .footer .grid-4 a {
   display: grid;
   align-items: center;
 }
-
 .footer .grid-4 h2 {
   grid-column: span 4;
   margin-bottom: 20px;
 }
-
 .footer .grid-footer {
   width: 100%;
   display: grid;
@@ -464,7 +476,6 @@ h3 {
 .footer-bottom {
   padding: 2rem 0;
 }
-
 .footer-bottom a {
   text-transform: none;
 }
@@ -473,58 +484,6 @@ h3 {
   display: grid;
   grid-template-columns: repeat(5, max-content);
   column-gap: 16px;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  column-gap: 0px;
-  column-gap: 1.5rem;
-}
-
-.grid-2 .btn {
-  width: 200px;
-  height: 62px;
-  padding: 20px 30px;
-  font-size: 12.8px;
-  text-transform: uppercase;
-  border: 0;
-  border-radius: 5px;
-}
-
-.grid-2 .btn.mix {
-  background-color: var(--purple);
-}
-
-.grid-2 .btn.mix .grid-2::before {
-  width: 20px;
-  height: 20px;
-  filter: invert(1);
-  content: url("../images/play-button.svg");
-}
-
-.grid-2 .btn.mix.mix:hover {
-  background-color: var(--light-purple);
-}
-
-.grid-2 .btn.save {
-  background-color: var(--terracotta);
-}
-
-.grid-2 .btn.save .grid-2::before {
-  width: 20px;
-  height: 17.79px;
-  filter: invert(1);
-  content: url("../images/heart.svg");
-}
-
-.grid-2 .btn.save.save:hover {
-  background-color: var(--light-terracotta);
-}
-
-.grid-2 .btn .grid-2 {
-  column-gap: 16px;
-  align-items: center;
 }
 
 .border-top {
@@ -542,57 +501,66 @@ h3 {
   column-gap: 15px;
   align-items: center;
 }
-
 .popular-track .img-track {
   width: 55px;
   height: 55px;
 }
-
 .popular-track .track-info {
   display: flex;
   justify-content: space-between;
 }
-
 .popular-track .track-info h3 {
   font-size: 12.8px;
   line-height: 19.2px;
   font-weight: bold;
   color: var(--white);
 }
-
 .popular-track .track-info p {
   font-size: 12.8px;
   line-height: 19.2px;
   font-weight: normal;
 }
 
-.grid-discography-5,
+.grid-discography-5 {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 50px;
+  row-gap: 25px;
+}
+.grid-discography-5 .discography-item {
+  text-align: left;
+}
+.grid-discography-5 .discography-item {
+  row-gap: 18px;
+}
+.grid-discography-5 .discography-item .img-discography {
+  width: 250px;
+  height: 250px;
+}
+.grid-discography-5 .discography-item h3 {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
 .grid-similar-5 {
   display: grid;
   grid-template-columns: repeat(4, max-content);
   column-gap: 50px;
-  row-gap: 25px
-  ;
+  row-gap: 25px;
 }
-.grid-discography-5 .discography-item,
 .grid-similar-5 .discography-item {
   text-align: left;
 }
-
-.grid-discography-5 .discography-item,
-.grid-discography-5 .similar-item,
-.grid-similar-5 .discography-item,
 .grid-similar-5 .similar-item {
   row-gap: 18px;
 }
-
-.grid-discography-5 .discography-item .img-discography,
 .grid-similar-5 .similar-item .img-similar {
   width: 250px;
   height: 250px;
 }
-
-.grid-discography-5 .discography-item h3,
 .grid-similar-5 .similar-item h3 {
   font-size: 18px;
   line-height: 27px;
@@ -606,23 +574,19 @@ h3 {
     font-size: 30px;
     line-height: 45px;
   }
-
   h2 {
     font-size: 18px;
     line-height: 27px;
   }
-
   h3 {
     font-size: 16px;
     line-height: 24px;
     font-weight: bold;
   }
-
   .container {
     width: 100vw;
     padding: 0 20px;
   }
-
   .head {
     left: 20px;
     right: 20px;
@@ -631,13 +595,11 @@ h3 {
     flex-direction: column;
     align-items: start;
   }
-
   .head .logo {
     display: flex;
     align-items: center;
     font-weight: bold;
   }
-
   .head .menu {
     display: flex;
     flex-direction: column;
@@ -645,50 +607,40 @@ h3 {
     margin: 17px 0 18px;
     font-weight: bold;
   }
-
   .head .form-search {
     margin: 0;
     width: 100%;
   }
-
   .head .form-search .search {
     width: 100%;
   }
-
   .news .flex-50 .img-news {
     width: 100%;
   }
-
   .news .flex-50 h3 {
     font-size: 16px;
     margin-bottom: 16px;
     margin-top: 50px;
   }
-
   .form .banner-form {
     width: 100%;
   }
-
   .grid-6 {
     display: flex;
     flex-direction: column;
     row-gap: 26px;
   }
-
   .grid-6 .pricing-item {
     padding-top: 16px;
   }
-
   .grid-6 .pricing-item h3 {
     font-weight: bold;
     font-size: 16px;
     line-height: 1.5;
   }
-
   .grid-6 .pricing-item:hover {
     transform: none;
   }
-
   .grid-2 {
     display: grid;
     grid-template-columns: repeat(1, max-content);
@@ -696,46 +648,37 @@ h3 {
     grid-template-rows: repeat(2, max-content);
     row-gap: 1.5rem;
   }
-
   .grid-2 .btn .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     column-gap: 16px;
     grid-template-rows: none;
   }
-
   .pt-100 {
     padding-top: 100px;
   }
-
   .flex-row-center.flex-left-top {
     flex-direction: column-reverse;
   }
-
   .flex-row-center.flex-left-top .img-app {
     padding-left: 0;
   }
-
   .flex-row-center.flex-left-top .img-align-mobile {
     width: 100%;
     text-align: center;
   }
-
   .footer {
     padding: 3rem 20px;
   }
-
   .footer .grid-footer {
     display: grid;
     grid-template-columns: repeat(1, max-content);
     column-gap: 0px;
     row-gap: 30px;
   }
-
   .footer-bottom {
     padding: 2rem 20px;
   }
-
   .grid-footer-2 {
     display: grid;
     grid-template-columns: repeat(1, max-content);
@@ -743,30 +686,34 @@ h3 {
     row-gap: 16px;
     text-align: left;
   }
-
   .mtb-200 {
     margin: 225px 0;
   }
-
   .grid-popular-2 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 0px;
   }
-
-  .grid-discography-5,
+  .grid-discography-5 {
+    display: grid;
+    grid-template-columns: repeat(2, 138px);
+    column-gap: 50px;
+  }
+  .grid-discography-5 .discography-item {
+    justify-content: start;
+  }
+  .grid-discography-5 .discography-item .img-discography {
+    width: 137px;
+    height: 137px;
+  }
   .grid-similar-5 {
     display: grid;
     grid-template-columns: repeat(2, 138px);
     column-gap: 50px;
   }
-
-  .grid-discography-5 .discography-item,
   .grid-similar-5 .similar-item {
     justify-content: start;
   }
-
-  .grid-discography-5 .discography-item .img-discography,
   .grid-similar-5 .similar-item .img-similar {
     width: 137px;
     height: 137px;
