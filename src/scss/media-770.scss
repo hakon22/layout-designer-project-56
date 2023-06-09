@@ -1,0 +1,132 @@
+@media (max-width: 1240px) {
+  html {
+    color: var(--white);
+  }
+
+  h1 {
+    @include h1(mobile);
+  }
+
+  h2 {
+    @include h2(mobile);
+  }
+
+  h3 {
+    @include h3(mobile);
+  }
+
+  .container {
+    @include container(mobile);
+  }
+
+  .head {
+    @include head(mobile);
+  }
+
+  .news {
+    @include news(mobile);
+  }
+
+  .form .banner-form {
+    width: 100%;
+  }
+
+  .grid-6 {
+    display: flex;
+    flex-direction: column;
+
+    .pricing-item {
+      @include pricing-item(mobile);
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+
+  .grid-2 {
+    @include grid(1, 0);
+
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 1.5rem;
+
+    .btn .grid-2 {
+      @include grid(2, 16);
+      grid-template-rows: none;
+    }
+  }
+
+  .pt-100 {
+    @include pt(100);
+  }
+
+  .flex-row-center.flex-left-top {
+    flex-direction: column-reverse;
+
+    .img-app {
+      @include img-app(mobile);
+    }
+
+    .img-align-mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .footer {
+    @include footer(mobile);
+  }
+
+  .footer-bottom {
+    @include footer-bottom(mobile);
+  }
+
+  .grid-footer-2 {
+    @include grid(1, 0);
+    row-gap: 16px;
+    text-align: left;
+  }
+
+  .ptb-200 {
+    padding-top: 250px;
+  }
+
+  .grid-popular-2 {
+    @include grid(1, 0, 1fr);
+  }
+
+  .grid-discography-5 {
+    @include grid(2, 50, 138px);
+  
+    .discography-item {
+      justify-content: start;
+
+      .img-discography {
+        width: 137px;
+        height: 137px;
+      }
+    }
+  }
+
+  .grid-similar-5 {
+    @include grid(2, 50, 138px);
+  
+    .similar-item {
+      justify-content: start;
+
+      .img-similar {
+        width: 137px;
+        height: 137px;
+      }
+    }
+  }
+
+  .mt-30 {
+    margin-top: 16px;
+  }
+
+  .ptb-250 {
+    padding-top: 225px;
+    padding-bottom: 224px;
+  }
+}
