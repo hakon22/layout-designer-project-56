@@ -1,0 +1,59 @@
+.page-discography {
+  padding-top: 68px;
+
+  .disco-title {
+    margin-bottom: 48px;
+  }
+
+  .disco-wrapper {
+    @include flex-start-start;
+
+    .discography-item {
+      @include flex-column-start;
+      margin-right: 50px;
+      margin-bottom: 25px;
+
+      .disco-name {
+        margin-bottom: 0;
+
+        color: nth($main-colors, 9);
+
+        font-weight: bold;
+        font-size: nth($desktop-title-sizes, 4);
+        line-height: nth($desktop-title-line-heights, 5);
+        text-transform: capitalize;
+      }
+
+      .disco-year {
+        @include mp-0;
+        color: nth($main-colors, 3);
+        font-weight: normal;
+        font-size: nth($text-sizes, 7);
+        line-height: nth($text-line-heights, 8);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .page-discography {
+    padding-top: 100px;
+
+    .disco-wrapper {
+      .discography-item {
+        .disco-img {
+          width: 137px;
+          height: 137px;
+        }
+
+        .disco-name {
+          max-width: 138px;
+        }
+      }
+
+      .discography-item:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

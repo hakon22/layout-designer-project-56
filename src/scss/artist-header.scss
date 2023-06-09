@@ -1,0 +1,122 @@
+.bg-header-artist {
+  background-image: url("../images/Morten\ Harket.png");
+
+  .page-description {
+    color: nth($main-colors, 9);
+
+    text-align: left;
+
+    .artist-title {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    .header-text {
+      margin-top: 20px;
+
+      font-weight: normal;
+      font-size: nth($text-sizes, 8);
+      line-height: nth($text-line-heights, 8);
+    }
+
+    .line-btns {
+      margin-top: 50px;
+      margin-bottom: 25px;
+
+      text-align: left;
+
+      .btn-artist {
+        position: relative;
+
+        box-sizing: border-box;
+        width: 200px;
+        padding: 20px 30px;
+
+        color: nth($main-colors, 9);
+        font-weight: normal;
+        font-size: nth($text-sizes, 10);
+        line-height: nth($text-line-heights, 9);
+
+        text-align: left;
+        text-transform: uppercase;
+
+        .btn-text {
+          @include mp-0;
+          display: inline-block;
+        }
+      }
+
+      .btn-violet {
+        margin-right: 27px;
+
+        background-color: nth($main-colors, 7);
+
+        .btn-text {
+          margin-top: -15px;
+          margin-left: 42px;
+        }
+      }
+
+      .btn-orange {
+        background-color: nth($main-colors, 8);
+
+        .btn-text {
+          margin-top: -15px;
+          margin-left: 35px;
+        }
+      }
+
+      .btn-violet::before {
+        @include btn-before;
+        top: 15px;
+        left: 35px;
+
+        background-image: url("../images/play-button.svg");
+      }
+
+      .btn-orange::before {
+        @include btn-before;
+        top: 15px;
+        left: 30px;
+
+        background-image: url("../images/heart.svg");
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .bg-header-artist {
+    .page-description {
+      margin-top: 25px;
+
+      .artist-title {
+        @include mp-0;
+      }
+
+      .header-text {
+        margin-top: 16px;
+      }
+
+      .line-btns {
+        .btn-violet {
+          margin-bottom: 22px;
+
+          .btn-text {
+            margin-left: 35px;
+          }
+        }
+
+        .btn-violet::before {
+          top: 20px;
+          left: 30px;
+        }
+
+        .btn-orange::before {
+          top: 20px;
+          left: 30px;
+        }
+      }
+    }
+  }
+}

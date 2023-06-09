@@ -1,0 +1,140 @@
+.page-pricing {
+  padding-top: 100px;
+
+  .title-pricing {
+    @include mp-0;
+    margin-bottom: 50px;
+
+    text-align: center;
+  }
+
+  .catalog-wrapper {
+    @include flex-between-start;
+
+    .bg-free {
+      background-image: url("../images/subscribe_1.png");
+    }
+
+    .bg-standard {
+      background-image: url("../images/subscribe_2.png");
+    }
+
+    .bg-premium {
+      background-image: url("../images/subscribe_3.png");
+    }
+
+    .pricing-item {
+      box-sizing: border-box;
+
+      width: 368px;
+      height: 615px;
+
+      padding: 0 1.5rem;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      border-radius: 1rem;
+
+      .card-item {
+        @include mp-0;
+        margin-top: 23px;
+        margin-bottom: 200px;
+
+        text-align: center;
+      }
+
+      .pricing-value {
+        margin-bottom: 38px;
+
+        font-size: nth($text-sizes, 5);
+        line-height: nth($text-line-heights, 5);
+
+        @include flex-center-start;
+
+        .price {
+          padding-right: 15px;
+
+          font-size: nth($text-sizes, 1);
+          line-height: 1em;
+        }
+      }
+
+      .btn-trans {
+        @include link;
+        @include title-regular;
+        display: block;
+        box-sizing: border-box;
+        width: 319px;
+        height: 66px;
+        margin: 0 auto;
+
+        color: nth($main-colors, 9);
+        font-size: nth($text-sizes, 8);
+        line-height: nth($text-line-heights, 8);
+
+        text-align: center;
+
+        border: 1px solid #fff;
+      }
+
+      .pricing-footer {
+        margin-top: 63px;
+
+        color: nth($main-colors, 9);
+        font-size: nth($text-sizes, 10);
+        line-height: nth($text-line-heights, 9);
+
+        text-align: center;
+      }
+    }
+  }
+
+  .price-description {
+    margin-top: 38px;
+
+    color: nth($main-colors, 9);
+    font-size: nth($text-sizes, 8);
+    line-height: nth($text-line-heights, 7);
+
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .page-pricing {
+    .catalog-wrapper {
+      @include flex-column-start;
+
+      .pricing-item {
+        width: 374px;
+        height: 621px;
+        margin-bottom: 25px;
+
+        .card-item {
+          margin-top: 16px;
+
+          font-size: nth($text-sizes, 8);
+          line-height: nth($text-line-heights, 8);
+        }
+
+        .btn-trans {
+          width: 326px;
+        }
+
+        .pricing-footer {
+          padding: 0;
+        }
+      }
+    }
+
+    .pricing-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .price-description {
+      margin-top: 8px;
+    }
+  }
+}

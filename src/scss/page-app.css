@@ -1,0 +1,83 @@
+.page-app {
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+
+.page-app .title-app {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.page-app .app-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.page-app .app-wrapper .app-text {
+  width: 600px;
+  color: #cacaca;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page-app .app-wrapper .app-text .btn-app {
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 40px;
+  color: #fff;
+  font-size: 12.8px;
+  line-height: 19.2px;
+  background-color: #95390c;
+  border-radius: 32px;
+}
+
+.page-app .app-wrapper .img-app {
+  width: 333px;
+  margin-left: 144px;
+}
+
+@media screen and (max-width: 414px) {
+  .page-app .app-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 45px;
+  }
+  .page-app .app-wrapper .app-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    margin-top: -30px;
+  }
+  .page-app .app-wrapper .img-app {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=page-app.css.map */

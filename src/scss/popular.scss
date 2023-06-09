@@ -1,0 +1,79 @@
+.page-popular-track {
+  padding-top: 100px;
+
+  .popular-title {
+    @include mp-0;
+    margin-bottom: 47px;
+  }
+
+  .popular-wrapper {
+    @include flex-start-start;
+
+    .popular-track {
+      @include flex-start-start;
+      width: calc(50% - 49px);
+      margin-bottom: 25px;
+
+      .track-info {
+        @include flex-between-start;
+        width: calc(100% - 70px);
+        margin-left: 15px;
+
+        font-size: nth($text-sizes, 10);
+        line-height: nth($text-line-heights, 9);
+
+        .track-name {
+          margin-top: 10px;
+
+          .album-name {
+            @include mp-0;
+            color: nth($main-colors, 9);
+            font-weight: bold;
+            font-size: nth($text-sizes, 10);
+            line-height: nth($text-line-heights, 9);
+          }
+
+          .track-autor {
+            @include mp-0;
+          }
+        }
+
+        .track-time {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .popular-track:nth-child(2n + 1) {
+      margin-right: 49px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .page-popular-track {
+    padding-top: 100px;
+
+    .popular-title {
+      margin-bottom: 47px;
+    }
+
+    .popular-wrapper {
+      .popular-track {
+        width: 100%;
+
+        .track-info {
+          width: calc(100% - 70px);
+
+          .track-time {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .popular-track:nth-child(2n + 1) {
+        margin-right: 0;
+      }
+    }
+  }
+}
