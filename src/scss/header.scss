@@ -1,230 +1,135 @@
-.bg-header {
-  padding-top: 200px;
-  padding-bottom: 200px;
+// --HEADER--------------------------------------------------------
+.header {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1200px;
 
-  background-image: url("../images/banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  // .header__menu
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
-  .nav-wrapper {
-    @include mp-0;
-    @include p-top-25;
-    @include flex-start-center;
-    position: absolute;
-    top: -200px;
-    left: 0;
-
-    width: 1200px;
-
-    text-transform: uppercase;
-
-    .nav-element {
-      font-size: nth($text-sizes, 11);
-      line-height: nth($text-line-heights, 10);
-
-      @include mp-0;
-
-      .nav-list {
-        list-style: none;
-
-        @include flex-start-center;
-
-        .nav-item {
-          margin-right: 25px;
-
-          .nav-link {
-            @include link;
-
-            color: nth($main-colors, 2);
-          }
-
-          .nav-link:hover {
-            color: nth($main-colors, 9);
-          }
-
-          .selected {
-            color: nth($main-colors, 9);
-          }
-        }
-
-        .nav-item:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-
-    .nav-music {
-      position: relative;
-
-      margin-right: 50px;
-      margin-left: 42px;
-
-      color: nth($main-colors, 9);
-    }
-
-    .nav-music::before {
-      position: absolute;
-      top: -4px;
-      left: -40px;
-
+.menu-header {
+  // .menu-header__logo
+  &__logo {
+    & img {
       width: 24px;
       height: 24px;
-
-      background-image: url("../images/logo.svg");
-      background-repeat: no-repeat;
-      background-size: 100%;
-
-      content: "";
+      margin-right: 14px;
     }
+  }
 
-    .nav-search {
-      box-sizing: border-box;
-      width: 248px;
-      height: 25px;
-      margin-right: 0;
-      margin-left: auto;
-      padding-top: 5px;
-      padding-left: 10px;
+  // .menu-header__navigation
+  &__navigation {
+    flex: 1 1 auto;
+    margin-left: 90px;
+  }
 
-      font-weight: 400;
+  // .menu-header__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+  }
+
+  // .menu-header__item
+  &__item {
+    flex: 0 1 auto;
+  }
+
+  // .menu-header__link
+  &__link {
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: $color-dark-gray;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // .menu-header__link-white
+  &__link-white {
+    color: $color-white;
+  }
+
+  // .menu-header__search
+  &__search {
+    flex: 0 1 auto;
+  }
+}
+
+.search-menu {
+  // .search-menu__input
+  &__input {
+    width: 248px;
+    border: none;
+    padding: 0;
+    height: 25px;
+    border-radius: 50px;
+    background-color: $color-black;
+    text-transform: uppercase;
+    color: #757575;
+
+    &::placeholder {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #757575;
       font-size: 13.3px;
-      font-family: nth($main-fonts, 2), nth($main-fonts, 3);
-      line-height: 15.3px;
-
-      background-color: nth($main-colors, 4);
-      border-radius: 50px;
-
-      .search-link {
-        @include link;
-
-        color: #757575;
-      }
+      padding: 0 0 0 10px;
     }
   }
 }
 
-.page-description {
-  color: nth($main-colors, 9);
-
-  text-align: center;
-
-  .title {
-    @include mp-0;
+// --HEADER-MEDIA--------------------------------------------------------
+@media (max-width: 1240px) {
+  .header {
+    max-width: 100%;
   }
 
-  .title-2 {
-    margin-top: 0;
+  .header__menu {
+    flex-wrap: wrap;
+    padding: 0 20px;
   }
 
-  .welcome-text {
-    margin-top: 33px;
-
-    font-weight: normal;
-    font-size: nth($text-sizes, 8);
-    line-height: nth($text-line-heights, 8);
-  }
-
-  .welcome-form {
-    max-width: 570px;
-    margin: 0 auto;
-
-    .welcome-datas {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-
-      .welcome-input {
-        box-sizing: border-box;
-        min-width: 270px;
-        min-height: 50px;
-        padding-left: 20px;
-
-        background: transparent;
-
-        border: 2px solid nth($main-colors, 2);
-        border-radius: 3px;
-      }
-
-      .welcome-input::placeholder {
-        color: nth($main-colors, 9);
-        font-size: nth($text-sizes, 9);
-        line-height: nth($text-line-heights, 10);
-      }
-    }
-
-    .btn-green {
-      width: 100%;
-      margin-top: -5px;
-
-      color: nth($main-colors, 9);
-      font-size: 13.3px;
-      font-family: nth($main-fonts, 2), nth($main-fonts, 3);
-      line-height: 15.3px;
-      text-transform: uppercase;
-
-      background-color: nth($main-colors, 5);
-    }
+  .menu-header__navigation {
+    margin: 0 10px;
   }
 }
 
-@media screen and (max-width: 414px) {
-  .bg-header {
-    .nav-wrapper {
-      @include flex-column-start;
-      left: 20px;
-
-      width: 374px;
-
-      .nav-element {
-        margin-left: 0;
-
-        .nav-list {
-          @include flex-column-start;
-
-          padding-top: 10px;
-          padding-left: 0;
-        }
-      }
-
-      .nav-music {
-        margin-top: 3px;
-        margin-left: 41px;
-      }
-
-      .nav-search {
-        width: 374px;
-        margin-top: 5px;
-      }
-    }
+@media (max-width: 414px) {
+  .menu-header__logo {
+    display: flex;
+    align-items: center;
   }
 
-  .page-description {
-    .title {
-      @include mp-0;
-      margin-top: 50px;
-    }
+  .menu-header__navigation {
+    flex: 0 0 100%;
+    margin: 0;
+  }
 
-    .welcome-text {
-      margin-top: 15px;
-      padding: 0;
-    }
+  .menu-header__list {
+    line-height: 13px;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 3px;
+    margin: 16px 0;
+  }
 
-    .welcome-form {
-      margin-left: -5px;
+  .search-menu__input {
+    width: 100%;
+  }
 
-      .welcome-datas {
-        flex-direction: column;
-        margin-bottom: 25px;
-
-        .welcome-input {
-          width: 100%;
-        }
-
-        .welcome-input:first-of-type {
-          margin-bottom: 23px;
-        }
-      }
-    }
+  .menu-header__search {
+    flex: 1 1 100%;
+    margin-top: 3px;
   }
 }

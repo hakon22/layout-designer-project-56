@@ -1,105 +1,87 @@
 @font-face {
-  font-weight: normal;
   font-family: Roboto;
-  src:
-    url("../fonts/Roboto-Regular.ttf") format("opentype"),
-    url("../fonts/Roboto-Regular.woff") format("woff"),
-    url("../fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("/src/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-  font-weight: bold;
   font-family: Roboto;
-  src:
-    url("../fonts/Roboto-Bold.ttf") format("opentype"),
-    url("../fonts/Roboto-Bold.woff") format("woff"),
-    url("../fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("/src/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
 }
 
-html {
-  font-size: nth($text-sizes, 7);
+@font-face {
+  font-family: Roboto;
+  src: url("/src/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  @include mp-0;
-  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cacaca;
+  background: #08020d;
 
-  color: nth($main-colors, 2);
-  font-weight: normal;
-  font-size: nth($text-sizes, 7);
-  font-family: nth($main-fonts, 1), nth($main-fonts, 3);
-  line-height: nth($text-line-heights, 7);
-
-  background-color: nth($main-colors, 1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 h1 {
-  @include title-property;
-  font-size: nth($desktop-title-sizes, 1);
-  line-height: nth($desktop-title-line-heights, 1);
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 h2 {
-  @include title-property;
-  font-size: nth($desktop-title-sizes, 2);
-  line-height: nth($desktop-title-line-heights, 2);
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 h3 {
-  @include title-regular;
-  font-size: nth($desktop-title-sizes, 3);
-  line-height: nth($desktop-title-line-heights, 4);
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.container {
-  position: relative;
-
-  box-sizing: border-box;
-
-  max-width: 1240px;
-
-  margin: 0 auto;
-  padding: 0 20px;
+h4 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.btn {
-  padding: 20px 30px;
-
-  border-radius: 5px;
-}
-
-.sr-only {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  padding: 0;
-
-  overflow: hidden;
-
-  white-space: nowrap;
-
-  border: 0;
-}
-
-@media screen and (max-width: 414px) {
-  .container {
-    max-width: 414px;
-  }
-
+@media (max-width: 414px) {
   h1 {
-    font-size: nth($mobile-title-sizes, 1);
-    line-height: nth($mobile-title-line-heights, 1);
-
-    @include title-property;
-    @include mp-0;
+    font-size: 30px;
+    line-height: 45px;
   }
 
   h2 {
-    font-size: nth($mobile-title-sizes, 2);
-    line-height: nth($mobile-title-line-heights, 2);
+    font-size: 18px;
+    line-height: 27px;
+  }
 
-    @include title-property;
-    @include mp-0;
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
