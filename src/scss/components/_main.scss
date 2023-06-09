@@ -1,0 +1,25 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+
+  @media (max-width: 414px) {
+    margin: 0;
+  }
+}
+
+.white-color {
+  color: #ffff;
+  height: 13px;
+
+  @media (max-width: 414px) {
+    height: 17px;
+  }
+}
+
+.main-section {
+  @include main-background(url("../images/banner.png"));
+}

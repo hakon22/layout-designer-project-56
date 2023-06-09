@@ -1,0 +1,21 @@
+@mixin font($size, $height, $weight, $transform) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-transform: $transform;
+}
+
+@mixin main-background($url) {
+  background-image: $url;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin btn-artist($background) {
+  width: 200px;
+  height: 62px;
+  color: $color-text;
+  background: $background;
+  border: none;
+  border-radius: 5px;
+}
